@@ -10,13 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 from decouple import config  # pip install decouple
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-import os
 
 # Media파일 사용 설정
 MEDIA_URL = "/media/"
@@ -104,7 +104,7 @@ V3_SECRET_KEY = config("V3_SECRET_KEY")
 # 카카오 appkey
 KAKAO_MAP = config("KAKAO_MAP")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -193,7 +193,21 @@ EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")  # 우리가 사용할 Gmail
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # reset link https가 http로 갈경우 이동 경로 재설정
-# SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+SECURE_HSTS_SECONDS = 31536000  # 365 * 24 * 60 * 60
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SAMESITE = 'Lax'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
