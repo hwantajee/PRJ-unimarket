@@ -5383,3 +5383,11 @@
 [2022-03-17 15:31:46]INFO [chat.views:256]dtoLike : <bound method QuerySet.values of <QuerySet []>>
 [2022-03-17 15:31:46]INFO [chat.consumers:295]연결보내기 : <chat.consumers.AlarmConsumer object at 0x0000020CCF2FB4C0>
 [2022-03-17 15:31:46]INFO [chat.consumers:295]연결보내기 : <chat.consumers.AlarmConsumer object at 0x0000020CCF1FAB80>
+[2022-03-28 18:55:44]INFO [unimarket.univiews.Hviews:182]dtoMark7: []
+[2022-03-28 18:55:44]INFO [unimarket.univiews.Hviews:191]dtoMark8: []
+[2022-03-28 18:55:44]INFO [unimarket.univiews.Hviews:197]stayPle: <QuerySet []>
+[2022-03-28 18:55:44]INFO [unimarket.univiews.Hviews:200]stayItem: None
+[2022-03-28 19:24:36]INFO [unimarket.univiews.Hviews:182]dtoMark7: []
+[2022-03-28 19:24:36]INFO [unimarket.univiews.Hviews:191]dtoMark8: []
+[2022-03-28 19:24:36]INFO [unimarket.univiews.Hviews:197]stayPle: <QuerySet []>
+[2022-03-28 19:24:36]INFO [unimarket.univiews.Hviews:200]stayItem: None

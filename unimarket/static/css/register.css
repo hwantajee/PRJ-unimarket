@@ -26,40 +26,45 @@ h1 {
 }
 
 .container form {
-	width: 70vw;
-	min-width: 300px;
-	margin: 0 auto;
-	display:flex;
-	flex-direction:column;
-	align-items:center;
+  width: 70vw;
+  min-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form > div {
-	width: inherit;
+  width: 350px;
 }
 
 .email_box > input {
-	width: inherit;
+  width: 264px;
   margin: 0 auto;
+  display: inline-block;
+}
+
+.email_box > button {
+  display: inline-block;
 }
 
 .passwd_box > input {
-	width: inherit;
+  width: inherit;
   margin: 0 auto;
 }
 
 .passwd1_box > input {
-	width: inherit;
+  width: inherit;
   margin: 0 auto;
 }
 
 .nickname_box > input {
-	width: inherit;
+  width: inherit;
   margin: 0 auto;
 }
 
 .bDate_box > input {
-	width: inherit;
+  width: inherit;
   margin: 0 auto;
 }
 
@@ -71,7 +76,7 @@ form > div {
 
 .icon-select > .icon-img {
   float: left;
-  width: 33.33%
+  width: 33.33%;
   padding: 5px;
 }
 
@@ -83,7 +88,7 @@ form > div {
   margin-right: auto;
 }
 
-.icon-select > .icon-img > [type=radio] {
+.icon-select > .icon-img > [type="radio"] {
   position: absolute;
   opacity: 0%;
   border: 0px;
@@ -91,24 +96,24 @@ form > div {
   height: 10%;
 }
 
-.icon-select > .icon-img > [type=radio]:checked + img {
+.icon-select > .icon-img > [type="radio"]:checked + img {
   border: 5px solid #d0c2e8;
 }
 
 .loc_fulltext > #address_kakao {
-	display:inline-block;
-	width: inherit;
+  display: inline-block;
+  width: 264px;
   margin: 0 auto;
 }
 
 .complete {
   margin-top: 10px;
-  width: 70vw;
-  min-width: 300px;
+  width: 350px;
 }
 
 .complete > input {
-  padding: 10px 55% 10px 45%;
+  padding: 10px 58% 10px 42%;
   border-radius: 0px;
   margin: 10px;
+  width: 350px;
 }
