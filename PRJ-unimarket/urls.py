@@ -22,11 +22,13 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('unimarket/', include("unimarket.urls")), # localhost:80000/unimarket/
+    # localhost:80000/unimarket/
+    path('unimarket/', include("unimarket.urls")),
     path('chat/', include('chat.urls')),
     #path('unimarket/', include('django.contrib.auth.urls')),
 ]
 
 # media 파일 서빙
-if settings.DEBUG :
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

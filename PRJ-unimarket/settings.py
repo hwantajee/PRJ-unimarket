@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 # Heroku: pip install (gunicorn, dj-database-url)
+import django_heroku
 import dj_database_url
 import os
 from pathlib import Path
@@ -106,7 +107,7 @@ V3_SECRET_KEY = config("V3_SECRET_KEY")
 # 카카오 appkey
 KAKAO_MAP = config("KAKAO_MAP")
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -263,3 +264,5 @@ STATIC_URL = '/static/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+django_heroku.settings(locals())
